@@ -24,10 +24,11 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-blue-50 text-gray-900 overflow-hidden">
+    <div className="min-h-screen w-full max-w-full bg-gradient-to-b from-orange-50 via-white to-blue-50 text-gray-900 overflow-x-hidden">
       <section className="relative max-w-6xl mx-auto px-6 py-24">
         <div className="absolute top-10 left-10 w-72 h-72 bg-orange-300/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-10 w-80 h-80 bg-blue-300/20 rounded-full blur-3xl"></div>
+
         <div className="relative text-center space-y-8">
           <div className="inline-block px-5 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold shadow-sm">
             Disponible en toda España
@@ -36,8 +37,8 @@ export default function LandingPage() {
           <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
             ¿No puedes alquilar solo?
             <span className="block mt-2 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                Encuentra gente para alquilar juntos.
-              </span>
+              Encuentra gente para alquilar juntos.
+            </span>
           </h1>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium">
@@ -68,7 +69,10 @@ export default function LandingPage() {
               Apuntarme gratis
             </a>
 
-            <a href="#como-funciona" className="bg-white border border-gray-200 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-gray-50 shadow-md transition-all inline-flex items-center justify-center">
+            <a
+              href="#como-funciona"
+              className="bg-white border border-gray-200 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-gray-50 shadow-md transition-all inline-flex items-center justify-center"
+            >
               Ver cómo funciona
             </a>
           </div>
@@ -80,7 +84,7 @@ export default function LandingPage() {
 
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
-            <div>
+            <div className="text-center lg:text-left">
               <p className="text-orange-600 font-black uppercase tracking-[0.25em] mb-4">
                 La idea es simple
               </p>
@@ -97,25 +101,37 @@ export default function LandingPage() {
               </p>
             </div>
 
-            <div className="relative">
+            <div className="relative w-full max-w-full">
               <div className="absolute -inset-6 bg-gradient-to-r from-orange-400 to-red-400 rounded-[3rem] blur-2xl opacity-20"></div>
 
-              <div className="relative bg-white/90 backdrop-blur rounded-[3rem] shadow-2xl border border-orange-100 p-8 md:p-10">
-                <div className="flex items-center justify-between gap-6 border-b border-orange-100 pb-6 mb-6">
+              <div className="relative w-full max-w-full overflow-hidden bg-white/90 backdrop-blur rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-orange-100 p-5 md:p-10">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 border-b border-orange-100 pb-6 mb-6 text-center sm:text-left">
                   <div>
-                    <p className="text-gray-500 font-semibold">Alquiler solo</p>
-                    <p className="text-5xl font-black text-gray-300 line-through">1.200€</p>
+                    <p className="text-gray-500 font-semibold">
+                      Alquiler solo
+                    </p>
+
+                    <p className="text-4xl sm:text-5xl font-black text-gray-300 line-through whitespace-nowrap">
+                      1.200€
+                    </p>
                   </div>
 
-                  <div className="text-6xl font-light text-orange-500 px-2">→</div>
+                  <div className="text-5xl sm:text-6xl font-light text-orange-500 px-2 rotate-90 sm:rotate-0">
+                    →
+                  </div>
 
                   <div>
-                    <p className="text-orange-600 font-semibold">Alquiler compartido</p>
-                    <p className="text-5xl font-black bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">600€</p>
+                    <p className="text-orange-600 font-semibold">
+                      Alquiler compartido
+                    </p>
+
+                    <p className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent whitespace-nowrap">
+                      600€
+                    </p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                   <div className="rounded-3xl bg-orange-50 p-5">
                     <div className="text-4xl mb-2">👤</div>
                     <p className="font-bold text-gray-700">1 persona</p>
@@ -155,7 +171,7 @@ export default function LandingPage() {
                 1
               </div>
 
-              <div className="text-6xl mb-6 mt-4">📝</div>
+              
 
               <h3 className="text-2xl font-bold mb-4">
                 Crea tu perfil
@@ -172,7 +188,7 @@ export default function LandingPage() {
                 2
               </div>
 
-              <div className="text-6xl mb-6 mt-4">🤝</div>
+              
 
               <h3 className="text-2xl font-bold mb-4">
                 Encuentra personas compatibles
@@ -188,7 +204,7 @@ export default function LandingPage() {
                 3
               </div>
 
-              <div className="text-6xl mb-6 mt-4">🏡</div>
+              
 
               <h3 className="text-2xl font-bold mb-4">
                 Alquilad juntos
@@ -217,6 +233,7 @@ export default function LandingPage() {
 
       <section id="formulario" className="relative py-24 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_left,_#f97316,_transparent_35%),radial-gradient(circle_at_bottom_right,_#3b82f6,_transparent_35%)]"></div>
+
         <div className="relative max-w-3xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-4xl font-bold mb-4">
